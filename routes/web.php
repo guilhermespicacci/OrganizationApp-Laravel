@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CreateTaskController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('createtask', [CreateTaskController::class, 'index'])->name('createTask');
